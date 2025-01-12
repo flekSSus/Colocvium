@@ -1,10 +1,14 @@
 #include "gtest/gtest.h"
 #include "Factorial.h"
 
-TEST(Test,HandleMinusOne)
+TEST(Test,Correct)
 {
-    Factorial fact(3);
-    EXPECT_EQ(*(fact.Calculate()+3),6);   
+    Factorial fact(10);
+    auto arr= fact.Calculate();
+        
+    EXPECT_EQ(arr[0],1);   
+    EXPECT_EQ(arr[5],120);   
+    EXPECT_EQ(arr[10],3'628'800);   
 }
 
 int main()
